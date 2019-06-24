@@ -4,7 +4,10 @@ pipeline{
  stage('Connecting to Sql server and listing the Logins') 
     {
      steps{
-           powershell  '"%WORKSPACE%\\scripts\\LoginDetails.Ps1"'
+           powershell  '''
+           cd C:\Users\sjagarlamudi1\Desktop>
+           ./LoginDetails.ps1
+           '''
            
            }
     }
