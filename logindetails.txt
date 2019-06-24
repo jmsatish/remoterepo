@@ -4,8 +4,8 @@ pipeline{
  stage('Connecting to Sql server and listing the Logins') 
     {
      steps{
-            powershell(returnStdout: true, script: '"%WORKSPACE%\\scripts\\LoginDetails.Ps1"')
-    
+            def msg =powershell(returnStdout: true, script: '"%WORKSPACE%\\scripts\\LoginDetails.Ps1"')
+               println msg
           }
     }
  stage('result')
