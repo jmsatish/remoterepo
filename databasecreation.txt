@@ -6,7 +6,7 @@ pipeline{
      steps{
            powershell '''
             cd C:/Users/sjagarlamudi1/Desktop/
-            ./powershell.ps1 
+            ./DatabaseCreation.ps1
             '''
           }
     }
