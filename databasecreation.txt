@@ -1,0 +1,21 @@
+pipeline{
+ agent {label 'master'}
+ stages {
+ stage('Creating Database') 
+    {
+     steps{
+           powershell '''
+            cd C:/Users/sjagarlamudi1/Desktop/
+            ./powershell.ps1 
+            '''
+          }
+    }
+ stage('result')
+    {
+     steps{
+          echo "success"
+          }
+    }      
+}
+}
+
