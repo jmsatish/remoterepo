@@ -10,34 +10,8 @@ pipeline{
             '''
           }
     }
-stage2('Creating Logins/Users')
-    {
-     steps{
-           powershell '''
-            cd C:/Users/sjagarlamudi1/Desktop/
-           ./LoginCreation.p1 
-            '''
-          }
-    }
-stage3('Assigning Roles to Logins/Users')
-    {
-     steps{
-           powershell '''
-            cd C:/Users/sjagarlamudi1/Desktop/
-            
-            '''
-          }
-    }
-stage4('Database Backup')
-    {
-     steps{
-           powershell '''
-            cd C:/Users/sjagarlamudi1/Desktop/
-            
-            '''
-          }
-    }
- stage('result')
+}
+ stage('Result')
     {
      steps{
           echo "success"
