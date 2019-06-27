@@ -1,0 +1,24 @@
+ pipeline{
+ agent {label 'master'}
+ stages {
+ stage('Database Backup Started') 
+    {
+     steps{
+           powershell  '''
+           cd C:/Users/sjagarlamudi1/Desktop
+           ./DatabaseBackup.ps1
+           '''
+           
+           }
+    }
+ stage('Result')
+    {
+     steps{
+          echo "success"
+          }
+    }      
+}
+      
+}
+
+
