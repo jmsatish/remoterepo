@@ -1,0 +1,24 @@
+ pipeline{
+ agent {label 'master'}
+ stages {
+ stage('Creating Login/User') 
+    {
+     steps{
+           powershell  '''
+           cd C:/Users/sjagarlamudi1/Desktop
+           ./LoginUserCreation.ps1
+           '''
+           
+           }
+    }
+ stage('Result')
+    {
+     steps{
+          echo "success"
+          }
+    }      
+}
+      
+}
+
+
